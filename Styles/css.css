@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+   /* box-sizing est appliqué à tous les éléments */
+}
+
+
+
+/*Propriétés Css générales*/
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+
+.bloc_page{
+    width: 100%;
+    text-align: center;
+    -webkit-animation: discret 3s forwards;
+            animation: discret 3s forwards;
+}
+
+h1{
+    margin-left: 20px;
+    font-family: 'Shrikhand' ;
+    font-size: 28px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/*Ici commence le css relatif a l'index*/
+
+
+/*Loader*/
+
+
+.chargement{
+    position: absolute;
+    background: linear-gradient(#FF79DA, #9356DC);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    line-height: 620px;
+    font-size: 30px;
+    -webkit-animation: fondu 3s forwards;
+            animation: fondu 3s forwards;
+}
+
+@-webkit-keyframes fondu{
+    0% { opacity: 1;}
+    98% { opacity: 1;}
+    100% { opacity: 0; display: none; z-index: -2;}
+    
+}
+
+@keyframes fondu{
+    0% { opacity: 1;}
+    98% { opacity: 1;}
+    100% { opacity: 0; display: none; z-index: -2;}
+    
+}
+
+
+@-webkit-keyframes discret{
+    0% { opacity: 0;}
+    98% { opacity: 0;}
+    100% { opacity: 1; z-index: 1;}
+    
+}
+
+@keyframes discret{
+    0% { opacity: 0;}
+    98% { opacity: 0;}
+    100% { opacity: 1; z-index: 1;}
+    
+}
+
+.chargement_txt{
+    font-family: 'Shrikhand';
+}
+
+.loader{
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+}
+
+.loader_spinner{
+    border-radius: 45px;
+    border: 7px solid rgba(255,255,255,0.4);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.loader_spinner::before{
+    content: '';
+    position: absolute;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+    border-radius: 45px;
+    border: 7px solid transparent;
+    border-left-color: white ;
+    -webkit-animation: spinner 0.5s linear infinite;
+            animation: spinner 0.5s linear infinite;
+}
+
+@-webkit-keyframes spinner{
+    0%{ transform: rotate(0deg); }
+        100%{ transform: rotate(360deg); }
+}
+
+@keyframes spinner{
+    0%{ transform: rotate(0deg); }
+        100%{ transform: rotate(360deg); }
+}
+
+
+/*<Header<*/
+
+.header_logo{
+    padding-top: 10px;
+}
+
+.header_logo_img{
+    width: 186px;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    background-color: #eaeaea;
+    border-top: solid 2px grey;
+    padding: 4%;
+}
+/*>Header>*/
+
+/*<Section_top<*/
+.section_top{ 
+    background-color: #f6f6f6;
+    padding: 10%;
+}
+
+.section_top h2{
+    margin-bottom: 10%;
+}
+.section_top_txt
+{
+    margin-bottom: 15%;
+}
+
+.section_top_txt p{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/*>Section_top>*/
+/*<Section_fonctionnement<*/
+
+.section_fonctionnement h2{
+    text-align: start;
+    margin-left: 20px;
+}
+
+.section_fonctionnement
+{
+    margin: 10% 0% 10% 0%;
+}
+
+.fonctionnement_liste_pimp{
+    display: flex;
+    gap: 20%;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    margin: 30px;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0px 0px 6px 2px lightgrey ;
+}
+
+.fonctionnement_liste_pimp_txt{
+    font-weight: 500;
+}
+
+.chiffre{
+    background-color: #9356DC;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    margin-left: -12px;
+}
+/*>Section_fonctionnement>*/
+/*///////////////////////////Ici Propriétés images et card/////////////////////////*/
+
+#section_restaurant{
+    background-color: #f6f6f6;
+    padding: 40px 0px 40px 0px;
+}
+
+#section_restaurant h2{
+    text-align: start;
+    margin-left: 20px;
+}
+
+.section_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.nouveau{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #99E2D0;
+    color: #008c66;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card_restaurant{
+    width: 90%;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    margin: 20px;
+    -webkit-filter: drop-shadow(5px 5px 5px lightgrey);
+            filter: drop-shadow(5px 5px 5px lightgrey);
+}
+
+.card_restaurant img {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card_restaurant_bottom{
+    min-height: 10%;
+    text-align: initial;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+}
+
+.not_new
+{
+    padding: 10px 0px 10px 10px;
+}
+.fa-heart{
+    padding-right: 20px;
+    font-size: 28px;   
+    font-weight: 500;
+    opacity: 1;
+}
+
+ .heart_anim{
+    opacity: 0;
+    position: relative;
+    left: 52px;
+    font-weight: bold;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-heart:hover{
+    -webkit-animation: like_bis 1s linear forwards;
+    animation: like_bis 1s linear forwards;
+}
+
+@-webkit-keyframes like_bis{
+0%{ opacity: 0;}
+100%{ opacity: 1;}
+}
+
+@keyframes like_bis{
+0%{ opacity: 0; }
+100%{ opacity: 1; }
+}
+
+.repas_txt_bis{
+    display: flex;
+    justify-content: space-between;
+
+}
+/*Ici commence le css relatif aux pages*/
+
+/*<header_pages<*/
+.header_logo_pages{
+    display: flex;
+    padding: 10px;
+}
+
+.header_logo_pages_img{
+    width: 186px;
+    display: block;
+    margin: auto;
+}
+
+.fa-arrow-left{
+    padding-top: 8px;
+}
+
+/*>header_pages>*/
+
+/*<section menu pages<*/
+.bloc_pages{
+    width: 100%;
+}
+.font_page{
+    margin-bottom: -20px;
+}
+
+.font_page_img{
+    width: 100%;
+    height: 210px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.bloc_pages h2{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #99E2D0;
+    margin-left: 20px;
+    width: 50px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.section_menu_titre{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.section_menu_pages{
+    padding-bottom: 2px;
+}
+
+.section_menu{
+    background-color: #f6f6f6;
+    margin-top: -20px;
+    position: relative;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+}
+
+
+.card_repas{
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-height: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 6px 2px lightgrey ;
+    line-height: 25px;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-animation: apparition 0.5s ease forwards;
+            animation: apparition 0.5s ease forwards;
+}
+
+@-webkit-keyframes apparition{
+    0%{opacity: 0; margin: 30px 20px 20px 20px;}
+    100%{opacity: 1; margin: 20px 20px 20px 20px;}
+}
+
+@keyframes apparition{
+    0%{opacity: 0; margin: 30px 20px 20px 20px;}
+    100%{opacity: 1; margin: 20px 20px 20px 20px;}
+}
+
+.delais_un{
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+.delais_deux{
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+}
+.delais_trois{
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+}
+.delais_quatre{
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+}
+.delais_cinq{
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+}
+.delais_six{
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+}
+.delais_sept{
+    -webkit-animation-delay: 2.1s;
+            animation-delay: 2.1s;
+}
+.delais_huit{
+    -webkit-animation-delay: 2.4s;
+            animation-delay: 2.4s;
+}
+.delais_neuf{
+    -webkit-animation-delay: 2.7s;
+            animation-delay: 2.7s;
+}
+.delais_dix{
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+}
+
+.card_repas_txt{
+    width: 100%;
+    margin-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.elipse{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_repas_anim{
+    background-color: #99E2D0;
+    height: 100%;
+    visibility: hidden;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.prix
+{
+    padding-top: 25px;
+    width: 10%;
+}
+
+.card_repas:hover .card_repas_anim {
+    overflow: hidden;
+    width: 30%;
+    -webkit-animation: diverte 0.7s ease-in forwards;
+    animation: diverte 0.7s ease-in forwards;
+}
+
+@-webkit-keyframes diverte{
+    0% { width: 0%; visibility:visible;}
+    100% { width: 30%; visibility: visible;}
+}
+
+@keyframes diverte{
+    0% { width: 0%;visibility: visible;}
+    100% { width: 30%;visibility: visible;}
+}
+
+.fa-circle-check{
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    
+}
+.card_repas:hover .fa-circle-check{
+    -webkit-animation: font_anim 0.7s ease-out 0s forwards;
+    animation: font_anim 0.7s ease-out 0s forwards;
+}
+
+@-webkit-keyframes font_anim{
+    0% {transform: rotate(0deg);}
+    30% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes font_anim{
+    0% {transform: rotate(0deg);}
+    30% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+/*>section menu pages>*/
+
+/*<footer commun<*/
+
+footer{
+
+    background-color: #353535;
+}
+
+.logo_footer{
+    color: white;
+    margin: 0px 10px 10px 10px;
+    font-family: 'Shrikhand';
+    padding-top: 20px;
+}
+
+.footer_txt{
+    color: white;
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+
+ul{
+    padding: initial;
+}
+
+footer li{
+    list-style: none;
+    padding: 0%;
+}
+footer a {
+    color: white;
+}
+
+.fa-utensils{
+    margin-right: 8px;
+}
+
+.fa-handshake-angle{
+    margin-right: 2px;
+}
+
+/*>footer commun>*/
+
+
+.btn_pages{
+    text-align: center;
+    margin: 40px 0PX 40px 0px;
+}
+
+.btn{
+    background: linear-gradient(to bottom right,#FF79DA, #9356DC);
+    width: 40%;
+    border-radius: 20px;
+    border: none;
+    height: 40px; 
+    opacity: 1;
+    box-shadow: 0px 0px 6px 2px lightgrey ;
+    transition: opacity 2s, box-shadow 2s;
+    
+}
+
+.btn:hover{
+    opacity: 0.8;
+    box-shadow: 0px 0px 6px 6px lightgrey ;
+    cursor: pointer;
+}
+
+.explo{
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+}
+
+.btn_txt{
+    color: white;
+}
